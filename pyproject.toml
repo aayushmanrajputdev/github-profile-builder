@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "github-profile-builder"
+version = "1.0.0"
+description = "Generate original GitHub profile READMEs, stats cards, contribution snakes, and wrapped summaries from real GitHub API data."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Aayushman Rajput", email = "aayushmanrajputdev@gmail.com" }
+]
+keywords = [
+    "github-profile",
+    "readme-generator",
+    "github-stats",
+    "contribution-snake",
+    "github-wrapped",
+    "svg",
+    "agent-skill",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Internet :: WWW/HTTP",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+github-profile-builder = "scripts.generate:main"
+
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
